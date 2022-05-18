@@ -1,0 +1,101 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d dul7uorohipz69qk --devtools-server-address http://127.0.0.1:9100/ --target lib\main.dart
+
+## exception
+
+FileSystemException: FileSystemException: Cannot create file, path = 'C:\Dart\Dart1\ToDoApp\flutter_application_1\.android\app\src\main\res\values\styles.xml' (OS Error: Процесс не может получить доступ к файлу, так как этот файл занят другим процессом.
+, errno = 32)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.createSync (dart:io/file_impl.dart:273:5)
+#2      ForwardingFile.createSync (package:file/src/forwarding/forwarding_file.dart:23:16)
+#3      ErrorHandlingFile.copySync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:323:24)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:597:14)
+#5      ErrorHandlingFile.copySync (package:flutter_tools/src/base/error_handling_io.dart:322:5)
+#6      Template.render.<anonymous closure> (package:flutter_tools/src/template.dart:345:18)
+#7      _LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:539:8)
+#8      Template.render (package:flutter_tools/src/template.dart:253:24)
+#9      AndroidProject._overwriteFromTemplate (package:flutter_tools/src/project.dart:539:14)
+<asynchronous suspension>
+#10     AndroidProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:498:9)
+<asynchronous suspension>
+#11     FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:318:7)
+<asynchronous suspension>
+#12     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1306:7)
+<asynchronous suspension>
+#13     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+<asynchronous suspension>
+#14     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#15     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#17     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#18     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#19     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#20     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#21     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.4, on Microsoft Windows [Version 10.0.19044.1645], locale ru-RU)
+    • Flutter version 2.10.4 at C:\Dart\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision c860cba910 (4 weeks ago), 2022-03-25 00:23:12 -0500
+    • Engine revision 57d3bac3dd
+    • Dart version 2.16.2
+    • DevTools version 2.9.2
+
+[!] Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
+    • Android SDK at C:\Users\Artem\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2019 16.11.4)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
+    • Visual Studio Community 2019 version 16.11.31727.386
+    • Windows 10 SDK version 10.0.19041.0
+
+[✓] Android Studio (version 2021.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.11+9-b60-7590822)
+
+[✓] VS Code (version 1.66.2)
+    • VS Code at C:\Users\Artem\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.38.1
+
+[✓] Connected device (4 available)
+    • Redmi Note 8 Pro (mobile) • dul7uorohipz69qk • android-arm64  • Android 11 (API 30)
+    • Windows (desktop)         • windows          • windows-x64    • Microsoft Windows [Version 10.0.19044.1645]
+    • Chrome (web)              • chrome           • web-javascript • Google Chrome 99.0.4844.74
+    • Edge (web)                • edge             • web-javascript • Microsoft Edge 99.0.1150.55
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
